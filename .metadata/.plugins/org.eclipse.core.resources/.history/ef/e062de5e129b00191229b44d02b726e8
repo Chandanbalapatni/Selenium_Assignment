@@ -1,0 +1,28 @@
+package org.day4;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Window_Handle {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","./src/driver/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.greenstechnologies.in/");
+		JavascriptExecutor scroll = ((JavascriptExecutor)driver);
+		scroll.executeScript("arguments[0].scrollIntoView(true)", driver.findElement(By.xpath("(//p[@class='description'])[10]")));
+		for (int i = 10;i<=15; i++) {
+			WebElement desc = driver.findElement(By.xpath("(//p[@class='description'])[i]"));
+			String txt = desc.getText();
+			System.out.println(txt);	
+		}
+		
+		driver.close();
+		
+	}
+
+}

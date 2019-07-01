@@ -1,0 +1,11 @@
+package org.day4;
+
+public class Question9 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium_Ques\\Selenium_Assignment\\src\\driver\\chromedriver.exe");
+		System.out.println("hello");
+
+	}
+
+}

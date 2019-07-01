@@ -1,0 +1,21 @@
+package org.day4;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Window_Handle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","./src/driver/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.greenstechnologies.in/");
+		WebElement desc = driver.findElement(By.xpath("//p[@class='description']"));
+		String txt = desc.getText();
+		System.out.println(txt);
+		
+	}
+
+}

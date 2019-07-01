@@ -1,0 +1,31 @@
+/* QUESTION 4
+----------
+URL : http://www.greenstechnologys.com/selenium-course-content.html 
+
+NOTE: Print the paragraph displayed below testimonial.
+  */
+
+package org.day4;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ques4 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium_Ques\\Selenium_Assignment\\src\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.greenstechnologys.com/selenium-course-content.html");
+		List <WebElement> rev= driver.findElements(By.xpath("//div[@class='box']"));
+		for (WebElement review : rev) {
+			System.out.println(review.getAttribute("value"));
+		}
+		
+
+	}
+
+}

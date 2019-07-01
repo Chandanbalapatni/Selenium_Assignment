@@ -1,0 +1,23 @@
+/* QUESTION 14
+-----------
+URL : https://www.flipkart.com/ 
+
+NOTE: Print electronic,tv and applicances,men,women,baby&kids,home&furniture and offerzone.(findElement by xpath,text)
+ */
+
+package org.dy4;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ques14 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium_Ques\\Selenium_Assignment\\src\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.flipkart.com/");
+		
+
+	}
+
+}
